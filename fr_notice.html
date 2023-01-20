@@ -1,0 +1,953 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>[Acloset] Présentation de la fonctionnalité &quot;Seconde Main&quot; pour une mode plus durable 🌱</title>
+    <style>
+      html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+        /* cspell:disable-file */
+        /* webkit printing magic: print all background colors */
+        html {
+            -webkit-print-color-adjust: exact;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media only screen {
+            body {
+                margin: 2em auto;
+                max-width: 900px;
+                color: rgb(55, 53, 47);
+            }
+        }
+
+        body {
+            /* line-height: 1.5; */
+            /* white-space: pre-wrap; */
+        }
+
+        a,
+        a.visited {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .pdf-relative-link-path {
+            font-size: 80%;
+            color: #444;
+        }
+
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 0.75em;
+        }
+
+        h1 {
+            font-size: 1.875rem;
+        }
+
+        h2 {
+            font-size: 20px
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        .source {
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 1.5em;
+            word-break: break-all;
+        }
+
+        .callout {
+            border-radius: 3px;
+            padding: 1rem;
+        }
+
+        figure {
+            margin: 1.25em 0;
+            page-break-inside: avoid;
+        }
+
+        figcaption {
+            opacity: 0.5;
+            font-size: 85%;
+            margin-top: 0.5em;
+        }
+
+        mark {
+            background-color: transparent;
+        }
+
+        .indented {
+            padding-left: 1.5em;
+        }
+
+        hr {
+            background: transparent;
+            display: block;
+            width: 100%;
+            height: 1px;
+            visibility: visible;
+            border: none;
+            border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        @media only print {
+            img {
+                max-height: 100vh;
+                object-fit: contain;
+            }
+        }
+
+        @page {
+            margin: 1in;
+        }
+
+        .collection-content {
+            font-size: 0.875rem;
+        }
+
+        .column-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            padding: 0 1em;
+        }
+
+        .column:first-child {
+            padding-left: 0;
+        }
+
+        .column:last-child {
+            padding-right: 0;
+        }
+
+        .table_of_contents-item {
+            display: block;
+            font-size: 0.875rem;
+            line-height: 1.3;
+            padding: 0.125rem;
+        }
+
+        .table_of_contents-indent-1 {
+            margin-left: 1.5rem;
+        }
+
+        .table_of_contents-indent-2 {
+            margin-left: 3rem;
+        }
+
+        .table_of_contents-indent-3 {
+            margin-left: 4.5rem;
+        }
+
+        .table_of_contents-link {
+            text-decoration: none;
+            opacity: 0.7;
+            border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgba(55, 53, 47, 0.09);
+            border-collapse: collapse;
+        }
+
+        table {
+            border-left: none;
+            border-right: none;
+        }
+
+        th,
+        td {
+            font-weight: normal;
+            padding: 0.25em 0.5em;
+            line-height: 1.5;
+            min-height: 1.5em;
+            text-align: left;
+        }
+
+        th {
+            color: rgba(55, 53, 47, 0.6);
+        }
+
+        ol,
+        ul {
+            margin: 0;
+            margin-block-start: 0.6em;
+            margin-block-end: 0.6em;
+        }
+
+        li > ol:first-child,
+        li > ul:first-child {
+            margin-block-start: 0.6em;
+        }
+
+        ul > li {
+            list-style: disc;
+        }
+
+        ul.to-do-list {
+            text-indent: -1.7em;
+        }
+
+        ul.to-do-list > li {
+            list-style: none;
+        }
+
+        .to-do-children-checked {
+            text-decoration: line-through;
+            opacity: 0.375;
+        }
+
+        ul.toggle > li {
+            list-style: none;
+        }
+
+        ul {
+            padding-inline-start: 1.7em;
+        }
+
+        ul > li {
+            padding-left: 0.1em;
+        }
+
+        ol {
+            padding-inline-start: 1.6em;
+        }
+
+        ol > li {
+            padding-left: 0.2em;
+        }
+
+        .mono ol {
+            padding-inline-start: 2em;
+        }
+
+        .mono ol > li {
+            text-indent: -0.4em;
+        }
+
+        .toggle {
+            padding-inline-start: 0em;
+            list-style-type: none;
+        }
+
+        /* Indent toggle children */
+        .toggle > li > details {
+            padding-left: 1.7em;
+        }
+
+        .toggle > li > details > summary {
+            margin-left: -1.1em;
+        }
+
+        .selected-value {
+            display: inline-block;
+            padding: 0 0.5em;
+            background: rgba(206, 205, 202, 0.5);
+            border-radius: 3px;
+            margin-right: 0.5em;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            white-space: nowrap;
+        }
+
+        .collection-title {
+            display: inline-block;
+            margin-right: 1em;
+        }
+
+        .simple-table {
+            margin-top: 1em;
+            font-size: 0.875rem;
+            empty-cells: show;
+        }
+
+        .simple-table td {
+            height: 29px;
+            min-width: 120px;
+        }
+
+        .simple-table th {
+            height: 29px;
+            min-width: 120px;
+        }
+
+        .simple-table-header-color {
+            background: rgb(247, 246, 243);
+            color: black;
+        }
+
+        .simple-table-header {
+            font-weight: 500;
+        }
+
+        time {
+            opacity: 0.5;
+        }
+
+        .icon {
+            display: inline-block;
+            max-width: 1.2em;
+            max-height: 1.2em;
+            text-decoration: none;
+            vertical-align: text-bottom;
+            margin-right: 0.5em;
+        }
+
+        img.icon {
+            border-radius: 3px;
+        }
+
+        .user-icon {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 100%;
+            margin-right: 0.5rem;
+        }
+
+        .user-icon-inner {
+            font-size: 0.8em;
+        }
+
+        .text-icon {
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        .page-cover-image {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            max-height: 30vh;
+        }
+
+        .page-header-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header-icon-with-cover {
+            margin-top: -0.72em;
+            margin-left: 0.07em;
+        }
+
+        .page-header-icon img {
+            border-radius: 3px;
+        }
+
+        .link-to-page {
+            margin: 1em 0;
+            padding: 0;
+            border: none;
+            font-weight: 500;
+        }
+
+        p > .user {
+            opacity: 0.5;
+        }
+
+        td > .user,
+        td > time {
+            white-space: nowrap;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 0.6em;
+            vertical-align: middle;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          margin:0;
+          padding:0;
+        }
+
+
+        .image {
+            margin: 0 auto;
+            width: 100%;
+            border: none;
+            padding: 0;
+            border-radius: 0;
+            text-align: center;
+        }
+
+        .code,
+        code {
+            background: rgba(135, 131, 120, 0.15);
+            border-radius: 3px;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 85%;
+            tab-size: 2;
+        }
+
+        code {
+            color: #eb5757;
+        }
+
+        .code {
+            padding: 1.5em 1em;
+        }
+
+        .code-wrap {
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        .code > code {
+            background: none;
+            padding: 0;
+            font-size: 100%;
+            color: inherit;
+        }
+
+        blockquote {
+            font-size: 1.25em;
+            margin: 1em 0;
+            padding-left: 1em;
+            border-left: 3px solid rgb(55, 53, 47);
+        }
+
+        .bookmark {
+            text-decoration: none;
+            max-height: 8em;
+            padding: 0;
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+        }
+
+        .bookmark-title {
+            font-size: 0.85em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            height: 1.75em;
+            white-space: nowrap;
+        }
+
+        .bookmark-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bookmark-info {
+            flex: 4 1 180px;
+            padding: 12px 14px 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bookmark-image {
+            width: 33%;
+            flex: 1 1 180px;
+            display: block;
+            position: relative;
+            object-fit: cover;
+            border-radius: 1px;
+        }
+
+        .bookmark-description {
+            color: rgba(55, 53, 47, 0.6);
+            font-size: 0.75em;
+            overflow: hidden;
+            max-height: 4.5em;
+            word-break: break-word;
+        }
+
+        .bookmark-href {
+            font-size: 0.75em;
+            margin-top: 0.25em;
+        }
+
+        .sans {
+            font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .code {
+            font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+        }
+
+        .serif {
+            font-family: Lyon-Text, Georgia, ui-serif, serif;
+        }
+
+        .mono {
+            font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+        }
+
+        .pdf .sans {
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+        }
+
+        .pdf:lang(zh-CN) .sans {
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+        }
+
+        .pdf:lang(zh-TW) .sans {
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+        }
+
+        .pdf:lang(ko-KR) .sans {
+            font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+        }
+
+        .pdf .code {
+            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+        }
+
+        .pdf:lang(zh-CN) .code {
+            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+        }
+
+        .pdf:lang(zh-TW) .code {
+            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+        }
+
+        .pdf:lang(ko-KR) .code {
+            font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+        }
+
+        .pdf .serif {
+            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+        }
+
+        .pdf:lang(zh-CN) .serif {
+            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+        }
+
+        .pdf:lang(zh-TW) .serif {
+            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+        }
+
+        .pdf:lang(ko-KR) .serif {
+            font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+        }
+
+        .pdf .mono {
+            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+        }
+
+        .pdf:lang(zh-CN) .mono {
+            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+        }
+
+        .pdf:lang(zh-TW) .mono {
+            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+        }
+
+        .pdf:lang(ko-KR) .mono {
+            font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+        }
+
+        .highlight-default {
+            color: rgba(55, 53, 47, 1);
+        }
+
+        .highlight-gray {
+            color: rgba(120, 119, 116, 1);
+            fill: rgba(120, 119, 116, 1);
+        }
+
+        .highlight-brown {
+            color: rgba(159, 107, 83, 1);
+            fill: rgba(159, 107, 83, 1);
+        }
+
+        .highlight-orange {
+            color: rgba(217, 115, 13, 1);
+            fill: rgba(217, 115, 13, 1);
+        }
+
+        .highlight-yellow {
+            color: rgba(203, 145, 47, 1);
+            fill: rgba(203, 145, 47, 1);
+        }
+
+        .highlight-teal {
+            color: rgba(68, 131, 97, 1);
+            fill: rgba(68, 131, 97, 1);
+        }
+
+        .highlight-blue {
+            color: rgba(51, 126, 169, 1);
+            fill: rgba(51, 126, 169, 1);
+        }
+
+        .highlight-purple {
+            color: rgba(144, 101, 176, 1);
+            fill: rgba(144, 101, 176, 1);
+        }
+
+        .highlight-pink {
+            color: rgba(193, 76, 138, 1);
+            fill: rgba(193, 76, 138, 1);
+        }
+
+        .highlight-red {
+            color: rgba(212, 76, 71, 1);
+            fill: rgba(212, 76, 71, 1);
+        }
+
+        .highlight-gray_background {
+            background: rgba(241, 241, 239, 1);
+        }
+
+        .highlight-brown_background {
+            background: rgba(244, 238, 238, 1);
+        }
+
+        .highlight-orange_background {
+            background: rgba(251, 236, 221, 1);
+        }
+
+        .highlight-yellow_background {
+            background: rgba(251, 243, 219, 1);
+        }
+
+        .highlight-teal_background {
+            background: rgba(237, 243, 236, 1);
+        }
+
+        .highlight-blue_background {
+            background: rgba(231, 243, 248, 1);
+        }
+
+        .highlight-purple_background {
+            background: rgba(244, 240, 247, 0.8);
+        }
+
+        .highlight-pink_background {
+            background: rgba(249, 238, 243, 0.8);
+        }
+
+        .highlight-red_background {
+            background: rgba(253, 235, 236, 1);
+        }
+
+        .block-color-default {
+            color: inherit;
+            fill: inherit;
+        }
+
+        .block-color-gray {
+            color: rgba(120, 119, 116, 1);
+            fill: rgba(120, 119, 116, 1);
+        }
+
+        .block-color-brown {
+            color: rgba(159, 107, 83, 1);
+            fill: rgba(159, 107, 83, 1);
+        }
+
+        .block-color-orange {
+            color: rgba(217, 115, 13, 1);
+            fill: rgba(217, 115, 13, 1);
+        }
+
+        .block-color-yellow {
+            color: rgba(203, 145, 47, 1);
+            fill: rgba(203, 145, 47, 1);
+        }
+
+        .block-color-teal {
+            color: rgba(68, 131, 97, 1);
+            fill: rgba(68, 131, 97, 1);
+        }
+
+        .block-color-blue {
+            color: rgba(51, 126, 169, 1);
+            fill: rgba(51, 126, 169, 1);
+        }
+
+        .block-color-purple {
+            color: rgba(144, 101, 176, 1);
+            fill: rgba(144, 101, 176, 1);
+        }
+
+        .block-color-pink {
+            color: rgba(193, 76, 138, 1);
+            fill: rgba(193, 76, 138, 1);
+        }
+
+        .block-color-red {
+            color: rgba(212, 76, 71, 1);
+            fill: rgba(212, 76, 71, 1);
+        }
+
+        .block-color-gray_background {
+            background: rgba(241, 241, 239, 1);
+        }
+
+        .block-color-brown_background {
+            background: rgba(244, 238, 238, 1);
+        }
+
+        .block-color-orange_background {
+            background: rgba(251, 236, 221, 1);
+        }
+
+        .block-color-yellow_background {
+            background: rgba(251, 243, 219, 1);
+        }
+
+        .block-color-teal_background {
+            background: rgba(237, 243, 236, 1);
+        }
+
+        .block-color-blue_background {
+            background: rgba(231, 243, 248, 1);
+        }
+
+        .block-color-purple_background {
+            background: rgba(244, 240, 247, 0.8);
+        }
+
+        .block-color-pink_background {
+            background: rgba(249, 238, 243, 0.8);
+        }
+
+        .block-color-red_background {
+            background: rgba(253, 235, 236, 1);
+        }
+
+        .select-value-color-pink {
+            background-color: rgba(245, 224, 233, 1);
+        }
+
+        .select-value-color-purple {
+            background-color: rgba(232, 222, 238, 1);
+        }
+
+        .select-value-color-green {
+            background-color: rgba(219, 237, 219, 1);
+        }
+
+        .select-value-color-gray {
+            background-color: rgba(227, 226, 224, 1);
+        }
+
+        .select-value-color-opaquegray {
+            background-color: rgba(255, 255, 255, 0.0375);
+        }
+
+        .select-value-color-orange {
+            background-color: rgba(250, 222, 201, 1);
+        }
+
+        .select-value-color-brown {
+            background-color: rgba(238, 224, 218, 1);
+        }
+
+        .select-value-color-red {
+            background-color: rgba(255, 226, 221, 1);
+        }
+
+        .select-value-color-yellow {
+            background-color: rgba(253, 236, 200, 1);
+        }
+
+        .select-value-color-blue {
+            background-color: rgba(211, 229, 239, 1);
+        }
+
+        .checkbox {
+            display: inline-flex;
+            vertical-align: text-bottom;
+            width: 16;
+            height: 16;
+            background-size: 16px;
+            margin-left: 2px;
+            margin-right: 5px;
+        }
+
+        .checkbox-on {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+        }
+
+        .checkbox-off {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+        }
+
+        @media only screen and (min-width: 1000px) {
+          .image{
+            width: 70%;
+          }
+         } 
+
+    </style>
+</head>
+<body>
+<article id="da54322e-a71f-4b2b-9956-9f015f1af14d" class="page sans">
+    <header><h1 style="font-size: 24px" class="page-title"><strong>[Acloset] Présentation de la fonctionnalité &quot;Seconde Main&quot; pour une
+        mode plus durable 🌱</strong></h1></header>
+    <div class="page-body" style="width: 100%; margin:0 auto;"><p id="37e3b9e9-0f9d-4802-a677-2a410e85e2d9" class="">
+    </p><br/>
+        <p id="aebc80d5-51c8-4e90-8d1a-6cf645153a0b" class="">Les salutations,</p><br/>
+        <p id="0fd7e8d4-70d1-49ba-a7a5-0cd3da5d3dba" class="">Ceci est l&#x27;équipe acloset.</p><br/>
+        <p id="bea5a910-9a35-48c9-9c98-5ba86bb68349" class="">Nous sommes heureux d&#x27;annoncer que cela fait deux ans
+            que nous avons lancé notre service pour la première fois. Notre objectif a été d&#x27;aider les utilisateurs
+            à surmonter le problème d&#x27;avoir un placard plein de vêtements, mais rien à porter. Bien que nous ayons
+            rencontré des défis en cours de route, nous avons pu continuer à poursuivre cette mission grâce à votre
+            amour et votre soutien.</p><br/>
+        <p id="703342b8-783c-4015-934b-a616189356c1" class="">Récemment, nous avons écouté vos commentaires, suggestions
+            et histoires grâce à des milliers de critiques, de courriels et d&#x27;interviews. Après un examen
+            minutieux, nous avons décidé de lancer une nouvelle fonctionnalité qui permettra aux utilisateurs d&#x27;acheter
+            et de vendre des articles de mode prélocés. Cela vous permettra de vendre des vêtements que vous ne portez
+            plus et d&#x27;acheter également des articles auprès d&#x27;autres utilisateurs. Nous pensons que cette
+            fonctionnalité complétera notre garde-robe numérique.</p>
+            <br/><br/><br/>
+        <h2 id="17ef21f9-ee3b-499e-bdc7-0c90abec5846" class="">1. De votre voix</h2><br/>
+        <p id="84bdbdc7-a76a-46ae-8bc9-442e52d6e25e" class="">Nos utilisateurs ont contribué à façonner cette direction.
+            Nous avons reçu beaucoup de commentaires d&#x27;utilisateurs qui souhaitent vendre facilement des vêtements
+            qu&#x27;ils ne portent plus lors de l&#x27;utilisation d&#x27;un acloset.</p><br/>
+        <p id="1fc2abfd-faf9-489a-891b-76438e15226c" class="">Notre équipe estime que pouvoir organiser et gérer des
+            vêtements qui ne sont plus portés est un élément essentiel d&#x27;un style de vie de mode intelligent. De
+            plus, l&#x27;achat et la vente de vêtements pré-aimés à un prix raisonnable non seulement apporte du
+            plaisir, mais contribuent également à la mode durable.</p><br/>
+        <p id="2e9d84cd-8d93-4883-9ec7-1fd95e252c10" class="">Nous travaillons actuellement dur pour implémenter cette
+            nouvelle fonctionnalité, et elle sera disponible dans notre prochaine mise à jour. Nous avons hâte que vous
+            commenciez à l&#x27;utiliser!</p><br/><br/><br/>
+        <h2 id="9b252e5b-de21-4cc4-b03d-249220d6ba4c" class="">2. Vendez vos vêtements facilement!</h2><br/>
+        <p id="fb06335b-951b-4ba8-a5df-d77d8cac427f" class="">Avec notre fonctionnalité «Prélat», vous pourrez
+            facilement vous inscrire et vendre des articles d&#x27;occasion de votre placard. Nous vous encourageons à
+            envisager de vendre des vêtements qui ne conviennent plus ou ne conviennent plus à votre style, car il vous
+            est une opportunité de gagner un revenu supplémentaire, et également de contribuer à la mode durable.</p><br/><br/><br/>
+        <h2 id="1faa5f0c-651e-407d-907f-6b798e4d47ba" class="">3. Trouvez votre match parfait avec l&#x27;IA</h2><br/>
+        <p id="963357a7-1672-4288-894d-6bb8da95cecf" class="">Nous utiliserons également notre propre technologie d&#x27;IA
+            pour recommander des vêtements vintage et d&#x27;occasion qui correspondent à votre goût et à votre style.
+            Notre moteur de recommandation vous aidera à trouver le produit parfait rapidement et facilement.</p><br/>
+        <p id="f1a3604d-f510-4e0f-a55c-013660cdf278" class="">Nous comprenons que la mise en œuvre de nouvelles
+            fonctionnalités peut susciter des inquiétudes selon lesquelles cela peut nuire à la convivialité du placard
+            numérique. Nous vous assurons que nous continuerons à maintenir les fonctionnalités existantes et à les
+            améliorer, car nous pensons que c&#x27;est la partie essentielle de notre service.</p><br/>
+        <p id="1a989314-6a6e-40f6-9dc8-a784f76e8e7c" class="">Ci-dessous, vous pouvez voir une brève introduction sur
+            les fonctionnalités «pré-aimées» à mettre à jour dans la prochaine version. Nous apprécierions votre
+            attention à cet égard. De plus, nous sommes toujours ouverts pour recevoir toutes les propositions
+            supplémentaires de nos précieux utilisateurs. Nous nous engageons à résoudre le problème chronique d&#x27;avoir
+            un placard plein de vêtements, mais rien à porter.</p><br/>
+        <p id="67476c13-d144-4b4e-8948-0a5369980400" class="">Merci pour votre soutien.</p><br/>
+        <p id="fb44e2e2-6e40-4483-88ee-ffe286798c8d" class="">Team Acloset.</p><br/>
+        <p id="de5fe1c0-7520-4423-b0c0-f7bb7bcef108" class="">
+        </p><br/>
+        <figure id="dbdd750a-2b9c-44d8-9e0b-82cd84fdc9df" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr1.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr1.jpg"/></a>
+        </figure>
+        <figure id="c6dc27e0-a299-416c-a3e8-dbceac798e91" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr2.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr2.jpg"/></a>
+        </figure>
+        <figure id="7949984e-22b8-4671-a330-4f18b179ffdb" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr3.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr3.jpg"/></a>
+        </figure>
+        <figure id="26052133-be34-4d96-9c44-9758c8535fa4" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr4.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr4.jpg"/></a>
+        </figure>
+        <figure id="00f5ad7d-e494-4fc6-9331-17a1f2748213" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr5.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr5.jpg"/></a>
+        </figure>
+        <figure id="8fff070e-f347-4fc7-a5eb-337ac90b2709" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr6.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr6.jpg"/></a>
+        </figure>
+        <figure id="a6bb47da-9222-49be-83ff-a032c199a181" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr7.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr7.jpg"/></a>
+        </figure>
+        <figure id="1a909725-36b9-4b28-9a49-43cbc8ae965b" class="image"><a
+                href="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr8.jpg"><img
+
+                src="https://acloset-bucket.s3.us-west-1.amazonaws.com/marketing-email/230120/fr8.jpg"/></a>
+        </figure>
+        <br/><br/><br/>
+    </div>
+</article>
+</body>
+</html>

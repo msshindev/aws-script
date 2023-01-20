@@ -1,0 +1,761 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1aabcb0a-0eff-4100-9415-1753a5b409b6" class="page sans"><header></header><div class="page-body"><p id="10bebeb5-870d-4c25-b00b-1ac8e17853c4" class="">안녕하세요. 에이클로젯 팀입니다. </p><p id="87521286-64eb-49fc-ac72-a0773236b7a4" class="">저희 서비스를 이용해주셔서 감사합니다.</p><p id="8d042b54-ef2e-4dcd-9133-a33282e10be7" class="">에이클로젯 이용약관과 개인정보처리방침이 다음과 같이 변경 예정임을 안내드립니다.</p><p id="99115b5e-ca5b-4831-ba66-3168a65d8ab1" class="">
+</p><h3 id="b99140fa-01d6-474b-886e-fe4ae12457fc" class="">이용약관</h3><table id="38a836e7-c022-4508-8e70-4c0c7fef816e" class="simple-table"><tbody><tr id="b9d264be-ec52-45e9-a7d3-fad67a40eda8"><td id="ez`_" class="" style="width:349.0000305175781px">개정 전</td><td id="`TdX" class="" style="width:349.0000305175781px">개정 후</td></tr><tr id="b827b7f6-b7c2-4e4c-aa14-d293e19d9d7b"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>제 2 조 약관의 명시, 효력 및 개정</strong>
+② 회사는 온라인 디지털콘텐츠산업 발전법, 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제에 관한 법률, 소비자기본법 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+③ 본 약관 및 차후 회사사정에 따라 변경된 약관은 이용자에게 공시한 날로부터 7일 후에 효력이 발생합니다.
+④ 신규</td><td id="`TdX" class="" style="width:349.0000305175781px"><strong>제 2 조 약관의 명시, 효력 및 개정</strong>
+② (삭제)
+<del>
+
+
+</del>
+③ 본 약관 및 차후 회사사정에 따라 변경된 약관은 이용자에게 공시한 날로부터 7일 후에 효력이 발생합니다.
+<mark class="highlight-blue">④ 위 기간 이내에 회원이 새로운 약관에 동의하지 않음을 표현하지 않으면, 변경된 약관에 동의하는 것으로 간주합니다. 변경된 약관에 동의하지 않는 경우 서비스 제공이 불가능합니다.</mark></td></tr><tr id="d16246be-eae3-424e-b293-b1e2346f0ec2"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>제 5 조 회원 등록의 성립과 유보 및 거절
+</strong>③ 회사는 아래 각 호의 1에 해당하는 경우에는 회원등록을 거절할 수 있습니다.
+2. (신규)
+3. (신규)</td><td id="`TdX" class="" style="width:349.0000305175781px"><strong>제 5 조 회원 등록의 성립과 유보 및 거절
+</strong>③ 회사는 아래 각 호의 1에 해당하는 경우에는 회원등록을 거절할 수 있습니다.
+<mark class="highlight-blue">2. 타인의 개인정보를 이용하여 가입을 신청하는 경우
+3. 이미 본인 명의의 계정을 보유한 회원이 가입을 신청하는 경우</mark></td></tr><tr id="7a440909-37fa-43fa-bf76-1e9f611280c2"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>제 8 조 회원정보의 변경</strong>
+회원은 아래 각 호의 1에 해당하는 사항이 변경되었을 경우 즉시 회원정보 관리페이지에서 이를 변경하여야 합니다. 이 경우 회사는 회원이 회원정보를 변경하지 아니하여 발생한 손해에 대하여 책임을 부담하지 않습니다.
+1. 휴대폰 번호, 이름, 성별 등
+2. 기타 회사가 인정하는 사항</td><td id="`TdX" class="" style="width:349.0000305175781px"><strong>제 8 조 회원정보의 변경</strong>
+회원은 <mark class="highlight-blue">회원정보가</mark> 변경되었을 경우 즉시 회원정보 관리페이지에서 이를 변경하여야 합니다. 이 경우 회사는 회원이 회원정보를 변경하지 아니하여 발생한 손해에 대하여 책임을 부담하지 않습니다.
+
+1. (삭제)
+2. (삭제)</td></tr><tr id="d1018836-e1ea-4b0a-816b-c8c688645f76"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>제 13 조 회원의 의무</strong>
+③ 회원이 사용자 콘텐츠를 게시할 때, 회원은 회사와 다른 회원에게 사용자 콘텐츠를 에이클로젯에서 사용, 보관, 전시, 재생산, 저장, 수정, 2차 저작물 생성, 공연, 배포할 수 있는 권리를 부여합니다. 이 권리는 비독점적이고, 로열티가 없고, 양도 가능하고, 2차 라이선스 제공이 가능하며, 전 세계적입니다. 회원은 에이클로젯에게 사용자 콘텐츠를 삭제, 수정할 권리와 에이클로젯에서 사용자 콘텐츠가 사용되는 방식을 변경할 권리를 부여합니다.
+④ 회원은 아래 행위를 하여서는 아니됩니다.
+9. (신규)
+
+
+10. (신규)
+
+11. (신규)
+
+12. (신규)
+
+13. (신규)</td><td id="`TdX" class="" style="width:349.0000305175781px"><strong>제 13 조 회원의 의무</strong>
+③ 회원이 사용자 콘텐츠를 게시할 때, 회원은 <mark class="highlight-blue">회사에게</mark> 사용자 콘텐츠를 사용, 보관, 전시, 재생산, 저장, 수정, 2차 저작물 생성, 공연, 배포할 수 있는 권리를 부여합니다. 이 권리는 비독점적이고, 로열티가 없고, 양도 가능하고, 2차 라이선스 제공이 가능하며, 전 세계적입니다. 회원은 에이클로젯에게 사용자 콘텐츠를 삭제, 수정할 권리와 에이클로젯에서 사용자 콘텐츠가 사용되는 방식을 변경할 권리를 부여합니다.
+
+④ 회원은 아래 행위를 하여서는 아니됩니다.
+9. 서비스 제공을 방해하거나 회사가 지정한 방법 이외의 다른 방법으로 서비스에 접근, 이용하는 행위
+10. 다른 사용자의 개인정보를 무단으로 수집하거나 제3자에게 제공하는 행위
+11. 제3자의 저작권을 침해하거나 음란물을 업로드하는 등 법을 위반하는 행위
+12. 회사의 동의 없이 서비스 또는 서비스의 일부를 복사, 수정, 배포하는 행위
+13. 역설계, 분해, 소스 코드 추출 등 서비스를 모방하려는 모든 행위</td></tr><tr id="c40eb1e7-70ce-4f89-894d-66ac8da44145"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>제 18 조 이용계약의 해지</strong>
+① 회원이 서비스 이용계약을 해지하고자 하는 때에는 언제든지 탈퇴할 수 있습니다.
+② (신규)</td><td id="`TdX" class="" style="width:349.0000305175781px"><strong>제 18 조 이용계약의 해지</strong>
+① 회원이 서비스 이용계약을 해지하고자 하는 때에는 언제든지 탈퇴할 수 있습니다. <mark class="highlight-blue">다만, 회사는 거래 관련 분쟁이 발생한 사용자의 탈퇴를 보류할 수 있습니다.</mark>
+② 회사는 탈퇴한 회원의 사용자 정보와 작성한 게시물 등 모든 데이터를 삭제합니다. 다만 아래의 경우 데이터를 삭제하지 않을 수 있습니다.
+1. 법령 및 개인정보처리방침에 따라 사용자 정보를 계속해서 보유해야 하는 경우
+2. 사용자가 작성한 게시물이 제3자에 의해 공유되는 등 에이클로젯 서비스의 정상적인 서비스 이용에 필요한 경우</td></tr><tr id="991f3155-ff10-40b0-a107-0bbb59022c55"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>신규</strong></td><td id="`TdX" class="" style="width:349.0000305175781px"><mark class="highlight-blue"><strong>제21조 개인정보 보호</strong></mark><mark class="highlight-blue">
+① 서비스 내의 콘텐츠가 &quot;저작권법&quot; 및 &quot;정보통신방법&quot; 등 관련법에 위반되는 경우, 해당 콘텐츠의 권리자는 회사에 해당 게시물의 게시중단 및 삭제 등을 요구할 수 있습니다.
+② 회사는 권리자의 요청이 없더라도 관련법 혹은 기타 회사 정책을 위반하는 게시물을 삭제하거나 노출을 제한할 수 있습니다.</mark></td></tr><tr id="5ee1bd5b-763d-4e01-83c3-fec7db3ddc1c"><td id="ez`_" class="" style="width:349.0000305175781px"><strong>신규</strong></td><td id="`TdX" class="" style="width:349.0000305175781px"><mark class="highlight-blue"><strong>제22조 서비스 고지 및 홍보내용 표시</strong></mark><mark class="highlight-blue">
+회사는 회원의 편의를 위해 서비스 이용과 관련된 각종 고지를 서비스 내 알림, 이메일, 문자 등으로 전송할 수 있으며, 이러한 고지를 수신함에 있어 발생할 수 있는 데이터 통신요금은 회원이 부담합니다. 회원은 이러한 고지에 대해 언제든지 수신을 거절할 수 있고, 회사는 회원이 수신을 거절하는 즉시 고지를 중단합니다.</mark></td></tr></tbody></table><p id="550517ce-a1f6-4dfe-b0a9-a5eca514fa7a" class="">
+</p><h3 id="ec706448-ce9c-47db-b8d6-aa2acb4a416e" class="">개인정보처리방침</h3><p id="5b016302-6820-4f1e-b215-ce7791c9669d" class=""><strong>주요 변경 내용</strong></p><ol type="1" id="0d808154-6e0c-4055-8a32-90509886bfb5" class="numbered-list" start="1"><li>중고거래 서비스 제공을 위하여 일부 개인정보를 추가 수집하며, 회사가 개인정보를 제공하는 제3자에 중고 상품 판매자가 추가되었습니다.</li></ol><ol type="1" id="4db8a1e4-0d79-47da-9617-3c9ae9ef597b" class="numbered-list" start="2"><li>서비스 품질 개선을 위하여 성별, 닉네임 등 일부 개인정보 수집이 추가되었습니다.</li></ol><ol type="1" id="765a3d0b-7ea2-49bd-9c26-7f8d3c54d73e" class="numbered-list" start="3"><li>안전하고 안정적인 서비스 제공을 위하여 개인정보처리 위탁 관련 조항이 추가되었습니다.</li></ol><table id="f46d5095-9fb7-49c9-aa22-86a3572c19e7" class="simple-table"><tbody><tr id="ee9b40f3-264e-43fd-8278-5b5b7e59f005"><td id="fYb\" class="" style="width:349.0000305175781px">개정 전</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">개정 후</td></tr><tr id="01f87bff-56b8-476b-9398-f44c87baab67"><td id="fYb\" class="" style="width:349.0000305175781px">제1조 [개인정보의 처리목적]
+2. 에이클로젯 서비스 제공 및 추가 서비스 개발
+신규 서비스 개발 및 개인별 맞춤 서비스 제공, 사용자 및 잠재적 사용자의 통계학적 특성에 따른 서비스 제공 및 광고 게재, 이벤트성 정보 및 참여 기회 제공, 각종 콘텐츠 제공, 접속빈도를 비롯한 회원의 서비스 이용 형태 분석, 만 14세 미만 아동의 정보수집 방지, 부정이용 방지 등을 목적으로 개인정보를 이용합니다.</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">제1조 [개인정보의 처리목적]
+2. 에이클로젯 서비스 제공 및 추가 서비스 개발
+<mark class="highlight-blue">채팅 서비스 제공, 중고거래시 발생하는 분쟁 조정, 상품의 구매이력 및 배송현황 관리 및 제공, 법령 및 이용약관을 위배하는 행위 방지, </mark>신규 서비스 개발 및 개인별 맞춤 서비스 제공, 사용자 및 잠재적 사용자의 통계학적 특성에 따른 서비스 제공 및 광고 게재, 이벤트성 정보 및 참여 기회 제공, 각종 콘텐츠 제공, 접속빈도를 비롯한 회원의 서비스 이용 형태 분석, 만 14세 미만 아동의 정보수집 방지, 부정이용 방지 등을 목적으로 개인정보를 이용합니다.</td></tr><tr id="56b7125d-0ac6-49c5-965b-262e4ee1508b"><td id="fYb\" class="" style="width:349.0000305175781px">제2조 [처리하는 개인정보 항목]
+1. 앱 또는 웹 회원 가입 및 관리
+성명, 생년월일, 아이디(이메일주소), 비밀번호, 휴대전화번호
+3. 재화 또는 서비스 제공
+나이, 성별, 서비스 이용기록, 사용자 생성 데이터, 사용자 업로드 이미지, 접속 경로 및 장치 등
+
+
+5. 고충처리
+휴대전화번호, 이메일주소
+
+
+6. 이용자가 상품을 구매한 경우
+성명, 휴대전화번호, 이메일, 상품구매정보, 결제정보</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">제2조 [처리하는 개인정보 항목]
+1. 앱 또는 웹 회원 가입 및 관리
+성명, 생년월일, 아이디(이메일주소), 비밀번호, 휴대전화번호, <mark class="highlight-blue">성별, 닉네임
+</mark>3. 재화 또는 서비스 제공
+<mark class="highlight-blue">위치정보, IP 주소, </mark>나이, 성별, 서비스 이용기록, 사용자 생성 데이터, 사용자 업로드 이미지, 접속 경로 및 장치, <mark class="highlight-blue">앱 또는 웹에서 주고받은 채팅 내용, CI, DI, 휴대폰번호, 생년월일, 성별, 통신사, 내/외국인 정보</mark> 등
+5. 고충처리
+휴대전화번호, 이메일주소, <mark class="highlight-blue">문의내역, 생년월일(필요시), 성명(필요시), 신분증사본(주민번호 뒷자리 마스킹처리, 필요시)
+</mark>6. 이용자가 상품을 구매, 판매한 경우
+성명, 휴대전화번호, 이메일, 상품구매정보, 결제정보, <mark class="highlight-blue">배송정보(주소, 송장번호 등)</mark></td></tr><tr id="4e945255-8db0-4294-ae3c-549921f7d25e"><td id="fYb\" class="" style="width:349.0000305175781px">제4조 [개인정보의 제3자 제공]
+2. 에이클로젯 서비스의 특성에 따라 사용자 정보가 쇼핑몰 사업자에게 공개 또는 제공될 수 있습니다. 다만, 해당 정보는 상품 구매, 민원 처리 등 이용자가 전달 또는 제공을 요청한 경우에만 한정적으로 전달되며, 회사는 이용자가 제공을 요청하지 않은 정보를 제3자에게 공개하거나 제공하지 않습니다.
+
+3. (신규)</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">제4조 [개인정보의 제3자 제공]
+2. 에이클로젯 서비스의 특성에 따라 사용자 정보가 쇼핑몰 사업자 <mark class="highlight-blue">또는 중고 상품 판매자</mark>에게 공개 또는 제공될 수 있습니다. 다만, 해당 정보는 상품 구매, 민원 처리 등 이용자가 전달 또는 제공을 요청한 경우에만 한정적으로 전달되며, 회사는 이용자가 제공을 요청하지 않은 정보를 제3자에게 공개하거나 제공하지 않습니다.
+<mark class="highlight-blue">3. 재난, 감염병, 생명이나 신체에 급박한 위험을 초래하는 사건과 사고 등의 긴급상황이 발생하는 경우 회사는 법령에 의거하여 관계 기관의 요청에 따라 개인정보를 제공할 수 있습니다.</mark></td></tr><tr id="54301cfe-de28-4ed3-a645-a6477fddf3df"><td id="fYb\" class="" style="width:349.0000305175781px">제5조 [개인정보처리의 위탁]
+1. 회사는 이용자의 개인정보 처리 업무를 위탁하고 있지 않습니다. 다만,추후 서비스 제공과정에서 개인정보 처리 업무를 위탁할 수 있으며, 이경우 회사는 이용자에게 본 개인정보처리방침을 통해 안내하거나 관련법령상 필요한 경우 이용자로부터 개인정보 처리 업무 위탁에 대한 동의를 받을 것입니다.</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">제5조 [개인정보처리의 위탁]
+<mark class="highlight-blue">1. 회사는 서비스 제공을 위해 아래와 같이 개인정보 처리를 외부에 위탁하고 있습니다.
+(아래 표1 참고)</mark>
+</td></tr><tr id="9f0950d5-eff1-4a77-9672-5ad0db343ac0"><td id="fYb\" class="" style="width:349.0000305175781px">제8조 [개인정보 보유 및 이용기간]
+3. 회사는 정보통신망 이용촉진 및 정보보호 등에 관한 법률 제29조 제2항에 따라 장기간(1년 이상) 서비스 미이용자의 개인정보 보호를 위하여 다른 이용자의 개인정보와 분리하여 별도로 보관합니다.</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">제8조 [개인정보 보유 및 이용기간]
+3. (삭제)</td></tr><tr id="6242e14a-0d36-448b-9022-75a588df140d"><td id="fYb\" class="" style="width:349.0000305175781px">제9조 [개인정보의 파기]
+2. 정보주체로부터 동의받은 개인정보 보유기간이 경과하거나 처리목적이 달성되었음에도 불구하고 다른 법령에 따라 개인정보를 계속 보존하여야 하는 경우에는, 해당 개인정보를 별도의 데이터베이스(DB)로 옮기거나 보관장소를 달리하여 보존합니다.</td><td id="=?&gt;?" class="" style="width:349.0000305175781px">제9조 [개인정보의 파기]
+2. (삭제)</td></tr></tbody></table><p id="a64fa3c0-0c24-4d3f-9c19-3eaa4edffb57" class="">표1: 개인정보처리 수탁 업체 및 업무 내용</p><table id="8fb0967f-49be-4f5d-afbe-0e38612df96c" class="simple-table"><tbody><tr id="c55e1bdc-2a5a-4ce4-9bbb-4af3be0d1b42"><td id="H&lt;uw" class="" style="width:334.0000305175781px">수탁 업체</td><td id="TcUo" class="" style="width:334.0000305175781px">업무 내용</td></tr><tr id="14f222a9-b06e-4638-8af8-3796fd4aa1e6"><td id="H&lt;uw" class="" style="width:334.0000305175781px">Twilio(Sendgrid)</td><td id="TcUo" class="" style="width:334.0000305175781px">이메일 발송</td></tr><tr id="2ddf72cb-9392-49fa-8bd2-ac3221527e17"><td id="H&lt;uw" class="" style="width:334.0000305175781px">Amazon Web Services, Inc.</td><td id="TcUo" class="" style="width:334.0000305175781px">클라우드 시스템 운영 및 정보 보관</td></tr><tr id="602ea273-eb54-49e1-a9f0-b873dc5d496e"><td id="H&lt;uw" class="" style="width:334.0000305175781px">Google LLC</td><td id="TcUo" class="" style="width:334.0000305175781px">이용자 데이터 분석</td></tr><tr id="2c483517-ed8a-410c-b276-44048bb5ed02"><td id="H&lt;uw" class="" style="width:334.0000305175781px">Meta Platforms Inc.</td><td id="TcUo" class="" style="width:334.0000305175781px">마케팅 분석</td></tr><tr id="0ada306c-ee67-4519-a80d-9784e859fb28"><td id="H&lt;uw" class="" style="width:334.0000305175781px">Bandwidth Inc.</td><td id="TcUo" class="" style="width:334.0000305175781px">SMS 발송</td></tr></tbody></table><p id="2e5d882a-980d-48f8-856a-04bb8bb6dfde" class="">개정된 이용약관과 개인정보처리방침은 2023년 1월 25일에 시행됩니다.</p><p id="5348c712-1548-46de-9f63-81cbc87250bb" class="">본 개정에 동의하지 않으시는 경우, 개정 시행일 전까지 에이클로젯에서 탈퇴하여 거부 의사를 표시하실 수 있습니다. 해당 기간 안에 별도의 의사표현이 없으시면 시행일부터 개정된 이용약관과 개인정보처리방침이 적용됩니다.</p><p id="878a48fd-338d-4f87-b855-bdf29bd7347b" class="">감사합니다.</p><p id="4a960564-5d5d-44c3-a1b8-68d1a9257593" class="">에이클로젯 팀 드림.</p><p id="8ef6047a-fdba-4e0a-b995-cbb9efd54dd6" class="">
+</p><hr id="aede9201-5dc9-419d-bf96-d099efefc393"/><p id="f608cbdc-482a-4b80-932e-1489d54c20f1" class="">본 메일은 관련 법령에 의한 의무통지 사안으로 마케팅 수신동의 여부에 관계없이 발송되었습니다.</p><p id="0c8b0950-668f-4116-8d6b-44f63372f6f4" class="">주식회사 룩코</p><p id="d4499f60-c156-4f57-97c5-7c3c45dd9bcf" class="">사업자등록번호: 339-87-01801</p><p id="e10eb8f5-401e-4368-a22e-5417cd1216fa" class="">주소: 대전광역시 서구 청사로 136, 대전무역회관 18층 R1879호</p></div></article></body></html>
